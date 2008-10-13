@@ -11,7 +11,9 @@
 class User
   include DataMapper::Resource
   
-  property :id,     Serial
-  property :login,  String
+  property :id, Serial
+  property :username, String
+  property :created_at, DateTime
+  property :updated_at, DateTime
   
 end

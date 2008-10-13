@@ -1,0 +1,9 @@
+<div id="slice-<%= slice.id %>">
+  <div class="name"><%= slice.name %></div>
+  <div class="description">NYI</div>
+  <div class="source"><%= link_to "source", slice.source %></div>
+  <div class="timestamps">
+    Discovered <%= slice.created_at.strftime("%Y-%m-%d") %>
+    Last updated <%= slice.last_commit_at.strftime("%Y-%m-%d") %>
+  </div>
+</div>

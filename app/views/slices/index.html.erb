@@ -1,0 +1,7 @@
+<h1>Slices</h1>
+
+<div id="slices">
+  <% @slices.each do |slice| %>
+    <%= partial "slices/slice", :with => slice %>
+  <% end %>
+</div>

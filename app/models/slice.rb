@@ -1,7 +1,26 @@
 class Slice
   include DataMapper::Resource
   
+  ### Properties
+  
+  property :id, Serial
+  property :name, String
+  property :source, String
+  property :user_id, Integer
+  property :last_commit_at, DateTime
+  property :description, Text
+  property :created_at, DateTime
+  property :updated_at, DateTime
+  
+  ### API Call Reference
+  
   GITHUB_QUERY = "http://github.com/api/v1/json/search/merb-slice"
+  
+  ### Methods
+  
+  # ...
+  
+  ### Class Methods
   
   class << self
     

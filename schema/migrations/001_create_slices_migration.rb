@@ -6,6 +6,7 @@ migration 1, :create_slices  do
       column :source, String
       column :user_id, Integer
       column :last_commit_at, DateTime
+      column :description, Text
       column :created_at, DateTime
       column :updated_at, DateTime
     end
