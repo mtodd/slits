@@ -1,3 +1,50 @@
-<h1>Slices controller, show action</h1>
-
-<p>Edit this file in <tt>app/views/slices/show.html.erb</tt></p>
+<div class="slice" id="slice-<%= @slice.id %>">
+  <h1 class="name"><%= @slice.name %></h1>
+  <div class="meta">
+    <div class="source">
+      <%= link_to "source", @slice.source %>
+    </div>
+    &middot;
+    <div class="timestamps">
+      Updated: <%= @slice.last_commit_at.strftime("%Y-%m-%d %H:%I:%S") %>
+    </div>
+  </div>
+  <div class="description">
+    <p>
+      <%= h @slice.description %>
+    </p>
+  </div>
+  <div class="spacer">&nbsp;</div>
+  <div class="comments">
+    <h2>Comments</h2>
+    <div class="spacer">&nbsp;</div>
+    
+    <% if current_user %>
+      <div class="link-to-add-comment">
+        <a href="#new-comment-form">Add New Comment</a>
+      </div>
+    <% end %>
+    
+    <div id="comments">
+      <% @slice.comments.each do |comment| %>
+        <%= partial "slices/comments/comment", :with => comment %>
+      <% end %>
+    </div>
+    <div class="spacer">&nbsp;</div>
+    
+    <% if current_user %>
+      <div id="new-comment-form">
+        <h2>New Comment</h2>
+        <div class="spacer">&nbsp;</div>
+        <%= form_for(Comment.new, :action => url(:slice_comments, @slice)) do %>
+          <%= hidden_field :slice_id, :value => @slice.id %>
+          <%= hidden_field :user_id, :value => current_user.id %>
+          <div class="body">
+            <%= text_area :body %>
+          </div>
+          <%= submit "save" %>
+        <% end =%>
+      </div>
+    <% end %>
+  </div>
+</div>

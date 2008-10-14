@@ -1,6 +1,6 @@
 <div class="slice" id="slice-<%= slice.id %>">
   <h3 class="name">
-    <%= slice.name %>
+    <%= link_to slice.name, url(:slice, slice) %>
   </h3>
   <div class="meta">
     <div class="source">

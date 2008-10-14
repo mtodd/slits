@@ -1,0 +1,14 @@
+<div class="comment" id="slice-<%= @slice.id %>-comment-<%= comment.id %>">
+  <div class="body">
+    <%= comment.body %>
+  </div>
+  <div class="meta">
+    <div class="author">
+      By <%= link_to comment.user.username, url(:user, comment.user) %>
+    </div>
+    &middot;
+    <div class="timestamps">
+      Posted <%= comment.created_at.strftime("%Y-%m-%d") %>
+    </div>
+  </div>
+</div>

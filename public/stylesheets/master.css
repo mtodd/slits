@@ -126,3 +126,32 @@ a:hover {
   padding: 0.25em;
   display: inline;
 }
+.slice .description {
+  font-size: 1.25em;
+}
+
+/*Comment Styles*/
+.comment {
+  padding: 0.5em;
+}
+.comment .body {
+  padding: 0.5em;
+  font-size: 1.25em;
+}
+.comment .meta {
+  padding: 0.25em;
+  font-style: italic;
+}
+
+/*User Styles*/
+
+
+/*Session Styles*/
+#user-session {
+  float: right;
+}
+
+/*General Styles*/
+form.delete-btn {
+  display: inline;
+}

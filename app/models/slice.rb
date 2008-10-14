@@ -1,6 +1,10 @@
 class Slice
   include DataMapper::Resource
   
+  ### API Call Reference
+  
+  GITHUB_QUERY = "http://github.com/api/v1/json/search/merb-slice"
+  
   ### Properties
   
   property :id, Serial
@@ -12,9 +16,10 @@ class Slice
   property :created_at, DateTime
   property :updated_at, DateTime
   
-  ### API Call Reference
+  ### Associations
   
-  GITHUB_QUERY = "http://github.com/api/v1/json/search/merb-slice"
+  has n, :comments
+  belongs_to :user
   
   ### Methods
   

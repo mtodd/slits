@@ -11,9 +11,16 @@
 class User
   include DataMapper::Resource
   
+  ### Properties
+  
   property :id, Serial
   property :username, String
   property :created_at, DateTime
   property :updated_at, DateTime
+  
+  ### Associations
+  
+  has n, :comments
+  has n, :slices
   
 end

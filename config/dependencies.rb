@@ -11,4 +11,4 @@ dependency "dm-core", "0.9.6"         # The datamapper ORM
 dependency "dm-migrations", "0.9.6"   # Make incremental changes to your database.
 dependency "dm-timestamps", "0.9.6"   # Automatically populate created_at, created_on, etc. when those properties are present.
 # dependency "dm-types", "0.9.6"        # Provides additional types, including csv, json, yaml.
-# dependency "dm-validations", "0.9.6"  # Validation framework
+dependency "dm-validations", "0.9.6"  # Validation framework
