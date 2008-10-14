@@ -117,3 +117,12 @@ a:hover {
 #main-container ul {
   margin-left: 3.0em;
 }
+
+/*Slice Styles*/
+.slice {
+  padding: 1em;
+}
+.slice .meta div {
+  padding: 0.25em;
+  display: inline;
+}
