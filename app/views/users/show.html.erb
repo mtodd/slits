@@ -1,3 +1,6 @@
-<h1>Users controller, show action</h1>
+<h1><%= @user.username %></h1>
 
-<p>Edit this file in <tt>app/views/users/show.html.erb</tt></p>
+<h2>Slices user has commented on</h2>
+<% @user.comments.map{|c|c.slice}.uniq.each do |slice| %>
+  <%= partial "slices/slice", :with => slice %>
+<% end %>

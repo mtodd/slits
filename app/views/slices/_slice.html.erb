@@ -10,6 +10,10 @@
     <div class="timestamps">
       Updated: <%= slice.last_commit_at.strftime("%Y-%m-%d %H:%I:%S") %>
     </div>
+    &middot;
+    <div class="comments">
+      <%= pluralize("%s Comment", slice.comments.size)%>
+    </div>
   </div>
   <div class="description">
     <p>
