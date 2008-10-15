@@ -32,6 +32,7 @@ Merb::Router.prepare do
   
   resources :slices do
     resources :comments, :controller => "slices/comments"
+    resources :tags, :controller => "slices/tags"
   end
   
   resources :users, :collection => {:login => :post, :logout => :delete}

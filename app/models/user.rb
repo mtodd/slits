@@ -22,5 +22,7 @@ class User
   
   has n, :comments
   has n, :slices
+  has n, :taggings
+  has n, :tags, :through => :taggings
   
 end

@@ -18,8 +18,10 @@ class Slice
   
   ### Associations
   
-  has n, :comments
   belongs_to :user
+  has n, :comments
+  has n, :taggings
+  has n, :tags, :through => :taggings
   
   ### Methods
   
